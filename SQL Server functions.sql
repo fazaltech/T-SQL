@@ -22,3 +22,6 @@ FROM Person.Person
 
 --CHAR_INDEX
 SELECT CHARINDEX('r','Brewster',3)
+
+--TRIM Function
+SELECT LTRIM('   This is a test'),RTRIM('   This is a test    '),TRIM('   This is a test    ')
