@@ -19,3 +19,6 @@ SELECT TOP 100
 		FirstName,
 		SUBSTRING(FirstName,3,5)
 FROM Person.Person
+
+--CHAR_INDEX
+SELECT CHARINDEX('r','Brewster',3)
