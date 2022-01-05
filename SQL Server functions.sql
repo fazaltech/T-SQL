@@ -25,3 +25,7 @@ SELECT CHARINDEX('r','Brewster',3)
 
 --TRIM Function
 SELECT LTRIM('   This is a test'),RTRIM('   This is a test    '),TRIM('   This is a test    ')
+
+--UPPER AND LOWER CASE
+
+SELECT 'brewster',UPPER('Brewster') AS [UPPER CASE],LOWER('BRewSTER')AS [LOWER CASE]
