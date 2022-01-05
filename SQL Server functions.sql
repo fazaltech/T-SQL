@@ -29,3 +29,8 @@ SELECT LTRIM('   This is a test'),RTRIM('   This is a test    '),TRIM('   This i
 --UPPER AND LOWER CASE
 
 SELECT 'brewster',UPPER('Brewster') AS [UPPER CASE],LOWER('BRewSTER')AS [LOWER CASE]
+
+--CHAR LENGTH
+
+SELECT TOP 100 LastName,LEN(LastName) FROM Person.Person
+
