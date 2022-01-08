@@ -34,3 +34,8 @@ SELECT 'brewster',UPPER('Brewster') AS [UPPER CASE],LOWER('BRewSTER')AS [LOWER C
 
 SELECT TOP 100 LastName,LEN(LastName) FROM Person.Person
 
+
+--CHAR LENGTH WITH TRIM Function
+
+SELECT '   T-SQL Class',LTRIM('   T-SQL Class'),LEN(LTRIM('   T-SQL Class')),LEN('T-SQL Class ')
+
