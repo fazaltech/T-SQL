@@ -47,3 +47,12 @@ SELECT
 	SUBSTRING([Name],3,7)AS Step_1
 FROM Production.Product
 
+
+--SUB STRING WITH UPPER CASE
+
+SELECT
+	[Name],
+	SUBSTRING([Name],3,7)AS Step_1,
+	UPPER(SUBSTRING([Name],3,7))AS Step_2
+FROM Production.Product
+
