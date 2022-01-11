@@ -39,3 +39,11 @@ SELECT TOP 100 LastName,LEN(LastName) FROM Person.Person
 
 SELECT '   T-SQL Class',LTRIM('   T-SQL Class'),LEN(LTRIM('   T-SQL Class')),LEN('T-SQL Class ')
 
+
+--SUB STRING 
+
+SELECT
+	[Name],
+	SUBSTRING([Name],3,7)AS Step_1
+FROM Production.Product
+
