@@ -7,3 +7,9 @@ FROM Person.Person
 SELECT BillToAddressID,ShipToAddressID,
 COALESCE(NULLIF(BillToAddressID,ShipToAddressID),1)
 FROM Sales.SalesOrderHeader
+
+
+SELECT
+Title,COALESCE(Title, 'No Title Listed') AS Title
+FROM Person.Person
+
