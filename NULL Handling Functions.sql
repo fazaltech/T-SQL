@@ -31,3 +31,9 @@ SELECT
 FirstName,MiddleName,LastName,COALESCE(FirstName + ' ' + MiddleName + ' ' + LastName,
 FirstName + ' ' + LastName) AS FullName
 FROM Person.Person
+
+
+--4) Using the Production.Product table, if the MakeFlag and FinishedGoodsFlag columns are equal then return a NULL value.
+
+SELECT MakeFlag, FinishedGoodsFlag,NULLIF(MakeFlag, FinishedGoodsFlag)
+FROM Production.Product
