@@ -22,3 +22,12 @@ SELECT
 MiddleName,COALESCE(MiddleName, 'No Middle Name Listed') AS MiddleName
 FROM Person.Person
 
+
+--3) If the MiddleName column is NULL then return the FirstName and LastName concatenated. If
+--the MiddleName is non-NULL then return the FirstName, MiddleName and LastName
+--concatenated.
+
+SELECT
+FirstName,MiddleName,LastName,COALESCE(FirstName + ' ' + MiddleName + ' ' + LastName,
+FirstName + ' ' + LastName) AS FullName
+FROM Person.Person
