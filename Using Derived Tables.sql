@@ -69,3 +69,17 @@ ON P.BusinessEntityID = E.BusinessEntityID
 
 --Error:
 --No column name was specified for column 4 of 'EmployeeDetails'.
+
+2) Will the following query execute properly? Why or why not?
+
+SELECT *
+FROM (
+SELECT TOP 100 P.BusinessEntityID, P.FirstName, P.LastName
+FROM HumanResources.Employee E
+INNER JOIN Person.Person P
+ON P.BusinessEntityID = E.BusinessEntityID
+ORDER BY 1
+) AS EmployeeDetails
+
+--CAUSE:
+--ALL cloumn has define
