@@ -55,3 +55,17 @@ LEFT OUTER JOIN(SELECT HireYear,COUNT(BusinessEntityID)AS NewHireCount
 ON Hire_by_Year.HireYear = Sales_by_Year.SalesYear
 ORDER BY 1
 
+
+
+1) Will the following query execute properly? Why or why not?
+
+SELECT *
+FROM (
+SELECT P.BusinessEntityID, P.FirstName, P.LastName, YEAR(E.HireDate)
+FROM HumanResources.Employee E
+INNER JOIN Person.Person P
+ON P.BusinessEntityID = E.BusinessEntityID
+) AS EmployeeDetails
+
+--Error:
+--No column name was specified for column 4 of 'EmployeeDetails'.
