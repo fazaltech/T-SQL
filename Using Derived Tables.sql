@@ -83,3 +83,20 @@ ORDER BY 1
 
 --CAUSE:
 --ALL cloumn has define
+
+--3) Using a derived table so that no functions will appear in the WHERE clause, find all employees
+--from the HumanResources.Employee table who were hired in the year 2006 or greater and who
+--were born in the year 1968 or less.
+
+SELECT *
+FROM (
+SELECT *, YEAR(HireDate) AS HireYear, YEAR(BirthDate) AS BirthYear
+FROM HumanResources.Employee
+) AS Emp
+WHERE HireYear >= 2006 AND BirthYear <= 1968
+
+
+
+SELECT *, YEAR(HireDate) AS HireYear, YEAR(BirthDate) AS BirthYear
+FROM HumanResources.Employee
+WHERE HireDate >= '2006-1-1' AND BirthDate <='1968-1-1'
