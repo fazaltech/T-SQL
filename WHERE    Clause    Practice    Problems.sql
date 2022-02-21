@@ -105,6 +105,8 @@ WHERE MiddleName IS NOT NULL AND PhoneNumberType ='Cell'
 
 
 ---Q1--
+--Return the FirstName and LastName columns from Person.Person where the FirstName column is equal to “Mark”--
+
 
 SELECT FirstName,LastName
 FROM HumanResources.vEmployee
